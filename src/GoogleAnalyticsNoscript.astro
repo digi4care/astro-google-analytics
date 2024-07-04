@@ -1,0 +1,26 @@
+---
+// component: src/components/common/GoogleAnalyticsNoscript.astro
+export interface Props {
+  id: string;
+  domain?: string;
+}
+
+const {
+  id = "GA_MEASUREMENT_ID",
+  domain = "https://www.googletagmanager.com",
+} = Astro.props;
+---
+
+<!-- Global site tag (gtag.js) - Google Analytics NoScript -->{
+  id && (
+    <noscript>
+      <iframe
+        src={`${domain}/gtag/js?id=${id}`}
+        height="0"
+        width="0"
+        style="display:none;visibility:hidden"
+      />
+    </noscript>
+  )
+}
+<!-- Einde Global site tag (gtag.js) - Google Analytics NoScript -->
