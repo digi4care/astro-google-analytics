@@ -1,6 +1,6 @@
 {
   "name": "@digi4care/astro-google-analytics",
-  "version": "1.1.1-beta.0",
+  "version": "1.1.1-beta.1",
   "description": "A seamless integration for injecting Google Analytics snippets into Astro projects, supporting popular web analytics tools.",
   "homepage": "https://github.com/digi4care/astro-google-analytics",
   "bugs": {
