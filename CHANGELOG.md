@@ -2,7 +2,7 @@
 
 All notable changes to this project will be documented in this file.
 
-## [1.1.1-beta.0] - 2025-05-09
+## [1.1.1-beta.1] - 2025-05-09
 
 ### 🧪 Beta Release
 This is a beta release that needs thorough testing before being promoted to a stable release.
