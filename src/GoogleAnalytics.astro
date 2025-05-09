@@ -16,13 +16,22 @@ const attrs = partytown ? { type: 'text/partytown' } : {};
 )}
 
 { id && (
-  <script is:inline {...attrs}>
+  <script is:inline define:vars={{ id }} {...attrs}>
+    // Initialize dataLayer
     window.dataLayer = window.dataLayer || [];
     function gtag() {
       window.dataLayer.push(arguments);
     }
+
+    // Initialize GA on first load
     gtag('js', new Date());
     gtag('config', id);
+
+    // Re-initialize GA on view transitions
+    document.addEventListener('astro:after-swap', () => {
+      gtag('js', new Date());
+      gtag('config', id);
+    });
   </script>
 )}
 <!-- Einde Global site tag (gtag.js) - Google Analytics -->
