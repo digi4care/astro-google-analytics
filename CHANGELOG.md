@@ -8,10 +8,11 @@ All notable changes to this project will be documented in this file.
 This is a beta release that needs thorough testing before being promoted to a stable release.
 
 ### 🔄 Changed
-- **[View Transitions Support]** Enhanced Google Analytics implementation to properly handle Astro View Transitions
-  - Added event listener for `astro:after-swap` to handle page transitions
-  - Re-initializes GA after each view transition
-  - Maintains proper page view tracking during client-side navigation
+- **[Universal Analytics Support]** Enhanced Google Analytics implementation to work seamlessly in all navigation scenarios
+  - Works with regular page navigation (default Astro behavior)
+  - Added support for Astro View Transitions via `astro:after-swap` event
+  - Properly tracks page views in both navigation modes
+  - Maintains analytics continuity during client-side transitions
   - Preserves script functionality with `is:inline` directive
 
 ### 🧪 Testing Needed

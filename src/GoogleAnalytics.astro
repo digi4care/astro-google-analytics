@@ -23,11 +23,12 @@ const attrs = partytown ? { type: 'text/partytown' } : {};
       window.dataLayer.push(arguments);
     }
 
-    // Initialize GA on first load
+    // Initialize GA on first load (works with or without View Transitions)
     gtag('js', new Date());
     gtag('config', id);
 
-    // Re-initialize GA on view transitions
+    // Re-initialize GA on view transitions (only runs if View Transitions is enabled)
+    // This event won't fire if you're not using View Transitions, so GA will work normally
     document.addEventListener('astro:after-swap', () => {
       gtag('js', new Date());
       gtag('config', id);
