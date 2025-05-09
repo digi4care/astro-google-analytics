@@ -3,3 +3,4 @@
 
 export { default as GoogleAnalytics } from './src/GoogleAnalytics.astro';
 export { default as GoogleAnalyticsNoscript } from './src/GoogleAnalyticsNoscript.astro';
+export { default as SiteVerification } from './src/SiteVerification.astro';
