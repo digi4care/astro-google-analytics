@@ -42,7 +42,12 @@ import { Analytics, AnalyticsNoScript, SiteVerification } from '@digi4care/astro
 
 ### Notes
 
-- **Analytics Component**: This component injects the Google Analytics script into your Astro project. Pass your GA4 measurement ID as the `id` prop. If you need to support a custom domain, use the `domain` prop.
+- **Analytics Component**: This component injects the Google Analytics script into your Astro project. Pass your GA4 measurement ID as the `id` prop. The `domain` prop is particularly important for:
+  - Cross-domain tracking: When you want to track user behavior across multiple domains
+  - Subdomain tracking: When you want to track across subdomains of your main domain
+  - Custom domain configurations: When using a custom domain for the Google Analytics script
+  
+  For most standard implementations, you can omit the domain parameter unless you specifically need cross-domain or subdomain tracking.
 - **AnalyticsNoScript Component**: This component provides a no-script fallback for Google Analytics. Note that there is no `partytown` support for this component.
 - **SiteVerification Component**: Use this component to add site verification meta tags. Pass your verification ID as the `id` prop. You can also specify the `name` prop to use different site verification names for various vendors.
 
