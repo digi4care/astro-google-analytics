@@ -17,20 +17,26 @@ const attrs = partytown ? { type: "text/partytown" } : {};
 
 { id && (
   <script define:vars={{ id }} {...attrs}>
-    // Initialize dataLayer
+    // Initialize dataLayer and gtag
     window.dataLayer = window.dataLayer || [];
-    function gtag() {
+    window.gtag = window.gtag || function gtag() {
       window.dataLayer.push(arguments);
-    }
+    };
 
-    // Initialize GA on first load
+    // Store current tracking ID on window for the after-swap listener
+    window.__ga_tracking_id = id;
+
+    // Send pageview on first load
     gtag('js', new Date());
     gtag('config', id);
 
-    // Re-initialize GA on view transitions
-    document.addEventListener('astro:after-swap', () => {
-      gtag('js', new Date());
-      gtag('config', id);
-    });
+    // Re-send pageview on view transitions (guard against duplicate listeners)
+    if (!window.__ga_after_swap_added) {
+      window.__ga_after_swap_added = true;
+      document.addEventListener('astro:after-swap', () => {
+        gtag('js', new Date());
+        gtag('config', window.__ga_tracking_id);
+      });
+    }
   </script>
 )}

@@ -35,5 +35,6 @@ pnpm-debug.log*
 .omp/
 graphify-out/
 docs/planning/
-CLAUDE.md
+AGENTS.md
 .planning-state.json
+.beads/
