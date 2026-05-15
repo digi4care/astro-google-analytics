@@ -1,14 +1,14 @@
 ---
 // component: src/components/common/GoogleAnalytics.astro
 export interface Props {
-  id: string;
-  partytown?: boolean;
-  domain?: string;
+	id: string;
+	partytown?: boolean;
+	domain?: string;
 }
 
-const { id = 'GA4_MEASUREMENT_ID', partytown = false, domain = 'https://www.googletagmanager.com' } = Astro.props;
+const { id, partytown = false, domain = "https://www.googletagmanager.com" } = Astro.props;
 
-const attrs = partytown ? { type: 'text/partytown' } : {};
+const attrs = partytown ? { type: "text/partytown" } : {};
 ---
 <!-- Global site tag (gtag.js) - Google Analytics -->
 { id && (
@@ -16,7 +16,7 @@ const attrs = partytown ? { type: 'text/partytown' } : {};
 )}
 
 { id && (
-  <script is:inline define:vars={{ id }} {...attrs}>
+  <script define:vars={{ id }} {...attrs}>
     // Initialize dataLayer
     window.dataLayer = window.dataLayer || [];
     function gtag() {
@@ -34,4 +34,3 @@ const attrs = partytown ? { type: 'text/partytown' } : {};
     });
   </script>
 )}
-<!-- Einde Global site tag (gtag.js) - Google Analytics -->

@@ -28,3 +28,12 @@ pnpm-debug.log*
 
 # vscode
 .vscode
+
+# tooling / planning / local config
+.claude/
+.leankg/
+.omp/
+graphify-out/
+docs/planning/
+CLAUDE.md
+.planning-state.json

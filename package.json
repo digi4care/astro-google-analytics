@@ -1,54 +1,57 @@
 {
-  "name": "@digi4care/astro-google-analytics",
-  "version": "1.1.1",
-  "description": "A seamless integration for injecting Google Analytics snippets into Astro projects, supporting popular web analytics tools.",
-  "homepage": "https://github.com/digi4care/astro-google-analytics",
-  "bugs": {
-    "url": "https://github.com/digi4care/astro-google-analytics/issues"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/digi4care/astro-google-analytics.git"
-  },
-  "author": {
-    "name": "digi4care",
-    "email": "chris@digi4care.nl",
-    "url": "https://github.com/digi4care"
-  },
-  "license": "MIT",
-  "type": "module",
-  "publishConfig": {
-    "access": "public"
-  },
-  "exports": {
-    ".": "./index.ts"
-  },
-  "files": [
-    "src",
-    "index.ts"
-  ],
-  "keywords": [
-    "astro-component",
-    "astro",
-    "analytics",
-    "google-analytics",
-    "ga4",
-    "astro-integration",
-    "web-analytics",
-    "gtag",
-    "SEO",
-    "website-tracking",
-    "web-analytics-integration"
-  ],
-  "scripts": {},
-  "devDependencies": {
-    "astro": "^1.2.1 || ^2.0.0 || ^3.0.0-beta.0 || ^3.0.0 || ^4.0.0 || ^5.0.0",
-    "typescript": "^4.0.0 || ^5.0.0"
-  },
-  "peerDependencies": {
-    "astro": "^1.2.1 || ^2.0.0 || ^3.0.0-beta.0 || ^3.0.0 || ^4.0.0 || ^5.0.0"
-  },
-  "dependencies": {
-    "@digi4care/astro-google-tagmanager": "^1.0.0"
-  }
+	"name": "@digi4care/astro-google-analytics",
+	"version": "2.0.0",
+	"description": "A seamless integration for injecting Google Analytics snippets into Astro projects, supporting popular web analytics tools.",
+	"homepage": "https://github.com/digi4care/astro-google-analytics",
+	"bugs": {
+		"url": "https://github.com/digi4care/astro-google-analytics/issues"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/digi4care/astro-google-analytics.git"
+	},
+	"author": {
+		"name": "digi4care",
+		"email": "chris@digi4care.nl",
+		"url": "https://github.com/digi4care"
+	},
+	"license": "MIT",
+	"type": "module",
+	"publishConfig": {
+		"access": "public"
+	},
+	"exports": {
+		".": "./index.ts"
+	},
+	"files": [
+		"src",
+		"index.ts"
+	],
+	"scripts": {
+		"lint": "biome check .",
+		"lint:fix": "biome check --write .",
+		"format": "biome format --write .",
+		"check": "biome check --write ."
+	},
+	"keywords": [
+		"astro-component",
+		"astro",
+		"analytics",
+		"google-analytics",
+		"ga4",
+		"astro-integration",
+		"web-analytics",
+		"gtag",
+		"SEO",
+		"website-tracking",
+		"web-analytics-integration"
+	],
+	"devDependencies": {
+		"@biomejs/biome": "^2.4.15",
+		"astro": "^6.3.3",
+		"typescript": "^6.0.3"
+	},
+	"peerDependencies": {
+		"astro": "^6.0.0"
+	}
 }
