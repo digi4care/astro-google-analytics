@@ -1,6 +1,6 @@
 {
 	"name": "@digi4care/astro-google-analytics",
-	"version": "2.0.1",
+	"version": "2.1.0",
 	"description": "A seamless integration for injecting Google Analytics snippets into Astro projects, supporting popular web analytics tools.",
 	"homepage": "https://github.com/digi4care/astro-google-analytics",
 	"bugs": {
@@ -47,11 +47,11 @@
 		"web-analytics-integration"
 	],
 	"devDependencies": {
-		"@biomejs/biome": "^2.4.15",
-		"astro": "^6.3.3",
-		"typescript": "^6.0.3"
+		"@biomejs/biome": "^2.5.15",
+		"astro": "^7.3.8",
+		"typescript": "^7.0.2"
 	},
 	"peerDependencies": {
-		"astro": "^6.0.0"
+		"astro": "^6.0.0 || ^7.0.0"
 	}
 }

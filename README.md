@@ -1,10 +1,10 @@
 # @digi4care/astro-google-analytics
 
-Google Analytics (GA4) integration for Astro 6+ with ClientRouter (View Transitions) and Partytown support.
+Google Analytics (GA4) integration for Astro 6 and 7 with ClientRouter (View Transitions) and Partytown support.
 
 ## Requirements
 
-- **Astro 6.0.0 or higher** — this package does not work with Astro 1–5.
+- **Astro 6.0.0 or Astro 7.0.0 or higher** — this package does not support Astro 1–5.
 
 ## Installation
 
@@ -97,7 +97,7 @@ That's it. The component sets `type="text/partytown"` on the script tags, which 
 
 | Change | Action |
 |--------|--------|
-| Requires Astro 6+ | Update your Astro project to `^6.0.0` |
+| Requires Astro 6+ | Update your Astro project to `^6.0.0` or `^7.0.0` |
 | Import `Analytics` | Rename to `GoogleAnalytics` |
 | Import `AnalyticsNoScript` | Rename to `GoogleAnalyticsNoscript` |
 | `id` had a fake default | You must now pass a real measurement ID |

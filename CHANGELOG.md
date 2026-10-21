@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## [2.1.0] - 2026-10-21
+
+### Added
+- Added Astro 7 support while retaining Astro 6 compatibility.
+- Updated development dependencies to the latest versions allowed by the repository's npm-check-updates cooldown policy.
+
 ## [2.0.0] - 2025-05-15
 
 ### Breaking Changes
